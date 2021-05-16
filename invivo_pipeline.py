@@ -175,7 +175,7 @@ output = moana.tomtom(motif_dir, jaspar_path, tomtom_dir, evalue=False, thresh=0
 
 # motif analysis
 num_filters = count_meme_entries(motif_dir)
-stats = tfomics.evaluate(os.path.join(tomtom_dirm,'tomtom.tsv'), num_filters)
+stats = tfomics.evaluate(os.path.join(tomtom_dir,'tomtom.tsv'), num_filters)
 stats_dir = os.path.join(results_path, model_name+'_stats_'+str(trial)+'.npy')
 np.save(stats_dir, stats, allow_pickle=True)
 
