@@ -160,16 +160,22 @@ with open(logs_dir, 'wb') as handle:
     cPickle.dump(history.history, handle)
 
 # Extract ppms from filters
-ppms = utils.get_ppms(model, x_test)
+index = [i.name for i in model.layers].index('conv_activation')
+ppms = moana.filter_activations(x_test, model, layer=index, window=20,threshold=0.5)
+
+# generate meme file
+ppms = moana.clip_filters(ppms, threshold=0.5, pad=3)
 motif_dir = os.path.join(results_path, model_name+'_filters_'+str(trial)+'.txt')
 moana.meme_generate(ppms, output_file=motif_dir, prefix='filter')
 
 # Tomtom analysis
 tomtom_dir = os.path.join(results_path, model)
-utils.tomtom(motif_dir, tomtom_dir)
+jaspar_dir = 'motif_database.txt'
+output = moana.tomtom(motif_dir, jaspar_path, tomtom_dir, evalue=False, thresh=0.5, dist='pearson', png=None, tomtom_path='tomtom')
 
 # motif analysis
-stats = utils.analysis(variant, motif_dir, tomtom_dir, model, x_test, y_test)
+num_filters = count_meme_entries(motif_dir)
+stats = tfomics.evaluate(os.path.join(tomtom_dirm,'tomtom.tsv'), num_filters)
 stats_dir = os.path.join(results_path, model_name+'_stats_'+str(trial)+'.npy')
 np.save(stats_dir, stats, allow_pickle=True)
 
