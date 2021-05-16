@@ -127,8 +127,19 @@ elif model_name == 'CNN_LSTM':
 elif model_name == 'CNN_LSTM_ATT':
     model = models.CNN_LSTM_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
                                 num_filters=num_filters, lstm_units=256, dense_units=1024, heads=16, key_size=128)
+elif model_name == 'CNN_LSTM_TRANS1':
+    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                                  num_filters=num_filters, num_layers=1, heads=16, key_size=256, dense_units=1024)
+elif model_name == 'CNN_LSTM_TRANS2':
+    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                                  num_filters=num_filters, num_layers=2, heads=16, key_size=256, dense_units=1024)
+elif model_name == 'CNN_LSTM_TRANS4':
+    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                                  num_filters=num_filters, num_layers=4, heads=16, key_size=256, dense_units=1024)
 else:
     print("can't find model")
+
+model_name = model_name + '_' + str(pool_size) + '_' + activation
 
 # compile model model
 auroc = tf.keras.metrics.AUC(curve='ROC', name='auroc')
