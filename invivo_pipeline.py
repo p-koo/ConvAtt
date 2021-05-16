@@ -180,4 +180,12 @@ stats = tfomics.evaluate.motif_comparison_synthetic_dataset(os.path.join(tomtom_
 stats_dir = os.path.join(results_path, model_name+'_stats_'+str(trial)+'.npy')
 np.save(stats_dir, stats, allow_pickle=True)
 
+# visualize filters
+fig = plt.figure(figsize=(25,8))
+W_df = impress.plot_filters(ppms, fig, num_cols=8, names=stats[2], fontsize=14)
+filter_dir = os.path.join(results_path, model_name+'_filters_'+str(trial)+'.pdf')
+fig.savefig(filter_dir, format='pdf', dpi=200, bbox_inches='tight')
+
+
+
 
