@@ -161,7 +161,7 @@ with open(logs_dir, 'wb') as handle:
 
 # Extract ppms from filters
 ppms = utils.get_ppms(model, x_test)
-logs_dir = os.path.join(results_path, model_name+'_filters_'+str(trial)+'.txt')
+motif_dir = os.path.join(results_path, model_name+'_filters_'+str(trial)+'.txt')
 moana.meme_generate(ppms, output_file=motif_dir, prefix='filter')
 
 # Tomtom analysis
