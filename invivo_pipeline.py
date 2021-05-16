@@ -171,7 +171,7 @@ moana.meme_generate(ppms, output_file=motif_dir, prefix='filter')
 # Tomtom analysis
 tomtom_dir = os.path.join(results_path, model)
 jaspar_dir = 'motif_database.txt'
-output = moana.tomtom(motif_dir, jaspar_path, tomtom_dir, evalue=False, thresh=0.5, dist='pearson', png=None, tomtom_path='tomtom')
+output = moana.tomtom(motif_dir, jaspar_dir, tomtom_dir, evalue=False, thresh=0.5, dist='pearson', png=None, tomtom_path='tomtom')
 
 # motif analysis
 num_filters = count_meme_entries(motif_dir)
