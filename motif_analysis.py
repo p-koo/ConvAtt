@@ -4,7 +4,7 @@ from tfomics import moana
 import numpy as np
 import matplotlib.pyplot as plt
 
-results_path = '../results/deepsea'
+results_path = '../results/basset'
 jaspar_dir = 'motif_database.txt'
 
 for motif_dir in os.listdir('.'):
