@@ -119,24 +119,24 @@ num_labels = y_train.shape[1]
 # build model
 if model_name == 'CNN_ATT':
     model = models.CNN_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
-                           num_filters=num_filters, dense_units=1024, heads=16, key_size=128)
+                           num_filters=num_filters, dense_units=512, heads=8, key_size=128)
 
 elif model_name == 'CNN_LSTM':
     model = models.CNN_LSTM(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
-                            num_filters=num_filters, lstm_units=256, dense_units=1024)
+                            num_filters=num_filters, lstm_units=128, dense_units=512)
 
 elif model_name == 'CNN_LSTM_ATT':
     model = models.CNN_LSTM_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
-                                num_filters=num_filters, lstm_units=256, dense_units=1024, heads=16, key_size=128)
+                                num_filters=num_filters, lstm_units=128, dense_units=512, heads=8, key_size=128)
 elif model_name == 'CNN_LSTM_TRANS1':
     model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
-                                  num_filters=num_filters, num_layers=1, heads=16, key_size=256, dense_units=1024)
+                                  num_filters=num_filters, num_layers=1, heads=8, key_size=128, dense_units=512)
 elif model_name == 'CNN_LSTM_TRANS2':
     model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
-                                  num_filters=num_filters, num_layers=2, heads=16, key_size=256, dense_units=1024)
+                                  num_filters=num_filters, num_layers=2, heads=8, key_size=128, dense_units=512)
 elif model_name == 'CNN_LSTM_TRANS4':
     model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
-                                  num_filters=num_filters, num_layers=4, heads=16, key_size=256, dense_units=1024)
+                                  num_filters=num_filters, num_layers=4, heads=8, key_size=128, dense_units=512)
 else:
     print("can't find model")
 
@@ -148,17 +148,20 @@ aupr = tf.keras.metrics.AUC(curve='PR', name='aupr')
 model.compile(tf.keras.optimizers.Adam(0.001), loss='binary_crossentropy', metrics=[auroc, aupr])
 
 # fit model
-lr_decay = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_aupr', factor=0.2, patient=5, verbose=1, min_lr=1e-7, mode='max')
-early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_aupr', patience=10, verbose=1, mode='max')
+lr_decay = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_aupr', factor=0.2, patient=4, verbose=1, min_lr=1e-7, mode='max')
+early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_aupr', patience=12, verbose=1, mode='max', restore_best_weights=True)
 history = model.fit(x_train, y_train, epochs=100, batch_size=100, validation_data=(x_valid, y_valid), callbacks=[lr_decay, early_stop], verbose=1)
+
+# save training and performance results
+results = model.evaluate(x_test, y_test)
+logs_dir = os.path.join(results_path, model_name+'_logs_'+str(trial)+'.pickle')
+with open(logs_dir, 'wb') as handle:
+    cPickle.dump(history.history, handle)
+    cPickle.dump(results, handle)
 
 # save model params
 model_dir = os.path.join(results_path, model_name+'_weights_'+str(trial)+'.h5')
 model.save_weights(model_dir)
-
-logs_dir = os.path.join(results_path, model_name+'_logs_'+str(trial)+'.pickle')
-with open(logs_dir, 'wb') as handle:
-    cPickle.dump(history.history, handle)
 
 # Extract ppms from filters
 index = [i.name for i in model.layers].index('conv_activation')
@@ -185,7 +188,6 @@ fig = plt.figure(figsize=(25,8))
 impress.plot_filters(ppms, fig, num_cols=8, names=stats[2], fontsize=14)
 filter_dir = os.path.join(results_path, model_name+'_filters_'+str(trial)+'.pdf')
 fig.savefig(filter_dir, format='pdf', dpi=200, bbox_inches='tight')
-
 
 
 

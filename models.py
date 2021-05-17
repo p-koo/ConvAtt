@@ -106,7 +106,7 @@ def CNN_LSTM_TRANS(in_shape=(200, 4), num_filters=32, batch_norm=True, activatio
         nn = layers.Add()([nn, nn2])
         nn = layers.LayerNormalization(epsilon=1e-6)(nn)
         nn2 = layers.Dense(32, activation='relu')(nn)
-        nn2 = layers.Dropout(0.2)(nn2)
+        nn2 = layers.Dropout(0.1)(nn2)
         nn2 = layers.Dense(key_size)(nn2)
         nn2 = layers.Dropout(0.1)(nn2)
         nn = layers.Add()([nn, nn2])
