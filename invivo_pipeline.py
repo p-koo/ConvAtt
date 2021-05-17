@@ -140,7 +140,7 @@ elif model_name == 'CNN_LSTM_TRANS4':
 else:
     print("can't find model")
 
-model_name = model_name + '_' + str(pool_size) + '_' + activation
+model_name = model_name + '_' + str(pool_size) + '_' + activation + '_' + str(trial)
 
 # compile model model
 auroc = tf.keras.metrics.AUC(curve='ROC', name='auroc')
@@ -154,13 +154,13 @@ history = model.fit(x_train, y_train, epochs=100, batch_size=100, validation_dat
 
 # save training and performance results
 results = model.evaluate(x_test, y_test)
-logs_dir = os.path.join(results_path, model_name+'_logs_'+str(trial)+'.pickle')
+logs_dir = os.path.join(results_path, model_name+'_logs.pickle')
 with open(logs_dir, 'wb') as handle:
     cPickle.dump(history.history, handle)
     cPickle.dump(results, handle)
 
 # save model params
-model_dir = os.path.join(results_path, model_name+'_weights_'+str(trial)+'.h5')
+model_dir = os.path.join(results_path, model_name+'_weights.h5')
 model.save_weights(model_dir)
 
 # Extract ppms from filters
@@ -169,7 +169,7 @@ ppms = moana.filter_activations(x_test, model, layer=index, window=20,threshold=
 
 # generate meme file
 ppms = moana.clip_filters(ppms, threshold=0.5, pad=3)
-motif_dir = os.path.join(results_path, model_name+'_filters_'+str(trial)+'.txt')
+motif_dir = os.path.join(results_path, model_name+'_filters.txt')
 moana.meme_generate(ppms, output_file=motif_dir, prefix='filter')
 
 # Tomtom analysis
@@ -180,13 +180,13 @@ output = moana.tomtom(motif_dir, jaspar_dir, tomtom_dir, evalue=False, thresh=0.
 # motif analysis
 num_filters = moana.count_meme_entries(motif_dir)
 stats = tfomics.evaluate.motif_comparison_synthetic_dataset(os.path.join(tomtom_dir,'tomtom.tsv'), num_filters)
-stats_dir = os.path.join(results_path, model_name+'_stats_'+str(trial)+'.npy')
+stats_dir = os.path.join(results_path, model_name+'_stats.npy')
 np.save(stats_dir, stats, allow_pickle=True)
 
 # visualize filters
 fig = plt.figure(figsize=(25,8))
 impress.plot_filters(ppms, fig, num_cols=8, names=stats[2], fontsize=14)
-filter_dir = os.path.join(results_path, model_name+'_filters_'+str(trial)+'.pdf')
+filter_dir = os.path.join(results_path, model_name+'_filters.pdf')
 fig.savefig(filter_dir, format='pdf', dpi=200, bbox_inches='tight')
 
 
