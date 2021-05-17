@@ -173,7 +173,7 @@ motif_dir = os.path.join(results_path, model_name+'_filters_'+str(trial)+'.txt')
 moana.meme_generate(ppms, output_file=motif_dir, prefix='filter')
 
 # Tomtom analysis
-tomtom_dir = os.path.join(results_path, model)
+tomtom_dir = os.path.join(results_path, model_name)
 jaspar_dir = 'motif_database.txt'
 output = moana.tomtom(motif_dir, jaspar_dir, tomtom_dir, evalue=False, thresh=0.5, dist='pearson', png=None, tomtom_path='tomtom')
 
