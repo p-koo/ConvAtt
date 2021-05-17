@@ -5,7 +5,7 @@ from six.moves import cPickle
 
 import tfomics
 import tensorflow as tf
-from tfomics import moana, evaluate
+from tfomics import moana, evaluate, impress
 import models
 import utils
 import argparse
