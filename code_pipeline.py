@@ -55,7 +55,13 @@ N, L, A = x_train.shape
 num_labels = y_train.shape[1]
 
 # build model
-if model_name == 'CNN_ATT':
+if model_name == 'CNN':
+    model = models.CNN(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                           num_filters=num_filters, dense_units=96, heads=8, key_size=128)
+elif model_name == 'CNN2':
+    model = models.CNN2(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                           num_filters=num_filters, dense_units=96, heads=8, key_size=128)
+elif model_name == 'CNN_ATT':
     model = models.CNN_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
                            num_filters=num_filters, dense_units=96, heads=8, key_size=48)
 
