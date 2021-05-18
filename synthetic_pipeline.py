@@ -41,10 +41,7 @@ trial = args.t
 num_filters = args.f
 
 # set paths
-results_path = '../results_synthetic'
-if not os.path.exists(results_path):
-    os.makedirs(results_path)
-results_path = os.path.join(results_path, dataset)
+results_path = '../results_task1'
 if not os.path.exists(results_path):
     os.makedirs(results_path)
 
