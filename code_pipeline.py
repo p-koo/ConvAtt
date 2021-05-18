@@ -147,7 +147,7 @@ snr = evaluate.calculate_snr(sal_signal, sal_noise_topk)
 
 results = model.evaluate(x_test, y_test, verbose=2)
 model_auroc = results[1]
-stats = np.array([sal_roc, sal_pr, snr, model_auroc])
+stats = np.array([saliency_roc, saliency_pr, snr, model_auroc])
 
 stats_dir = os.path.join(results_path, model_name+'_stats.npy')
 np.save(stats_dir, stats, allow_pickle=True)
