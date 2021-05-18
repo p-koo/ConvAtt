@@ -41,7 +41,7 @@ trial = args.t
 num_filters = args.f
 
 # set paths
-results_path = '../results_task1'
+results_path = '../results_task2'
 if not os.path.exists(results_path):
     os.makedirs(results_path)
 
