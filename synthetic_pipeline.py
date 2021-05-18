@@ -14,7 +14,7 @@ import models
 
 def load_synthetic_data(file_path):
 
-    with h5py.File(io.BytesIO(file_path), 'r') as dataset:
+    with h5py.File(file_path, 'r') as dataset:
         x_train = np.array(dataset['X_train']).astype(np.float32).transpose([0, 2, 1])
         y_train = np.array(dataset['Y_train']).astype(np.float32)
         x_valid = np.array(dataset['X_valid']).astype(np.float32).transpose([0, 2, 1])
