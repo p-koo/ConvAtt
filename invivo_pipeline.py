@@ -184,12 +184,12 @@ model.save_weights(model_dir)
 
 # Extract ppms from filters
 index = [i.name for i in model.layers].index('conv_activation')
-ppms = moana.filter_activations(x_test, model, layer=index, window=20,threshold=0.5)
+ppms = moana.filter_activations(x_test, model, layer=index, window=20, threshold=0.5)
 
 # generate meme file
-ppms = moana.clip_filters(ppms, threshold=0.5, pad=3)
+ppms_filtered = moana.clip_filters(ppms, threshold=0.5, pad=3)
 motif_dir = os.path.join(results_path, model_name+'_filters.txt')
-moana.meme_generate(ppms, output_file=motif_dir, prefix='filter')
+moana.meme_generate(ppms_filtered, output_file=motif_dir, prefix='filter')
 
 # Tomtom analysis
 tomtom_dir = os.path.join(results_path, model_name)
@@ -202,11 +202,15 @@ stats = tfomics.evaluate.motif_comparison_synthetic_dataset(os.path.join(tomtom_
 stats_dir = os.path.join(results_path, model_name+'_stats.npy')
 np.save(stats_dir, stats, allow_pickle=True)
 
-# visualize filters
-fig = plt.figure(figsize=(25,8))
-impress.plot_filters(ppms, fig, num_cols=8, names=stats[2], fontsize=14)
-filter_dir = os.path.join(results_path, model_name+'_filters.pdf')
-fig.savefig(filter_dir, format='pdf', dpi=200, bbox_inches='tight')
+if trial == 0:
+    # visualize filters
+    fig = plt.figure(figsize=(25,8))
+    impress.plot_filters(ppms, fig, num_cols=8, names=stats[2], fontsize=14)
+    filter_dir = os.path.join(results_path, model_name+'_filters.pdf')
+    fig.savefig(filter_dir, format='pdf', dpi=200, bbox_inches='tight')
+
+
+
 
 
 
