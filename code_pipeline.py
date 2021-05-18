@@ -29,14 +29,12 @@ def load_synthetic_data(file_path):
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-m", type=str, default=0.05, help="model_name")
-parser.add_argument("-p", type=int, default=20, help="pool_size")
 parser.add_argument("-a", type=str, default='relu', help="activation")
 parser.add_argument("-f", type=int, default=48, help="filters")
 parser.add_argument("-t", type=int, default=None, help="trial")
 args = parser.parse_args()
 
 model_name = args.m
-pool_size = args.p
 activation = args.a
 trial = args.t
 num_filters = args.f
@@ -56,73 +54,73 @@ num_labels = y_train.shape[1]
 
 # build model
 if model_name == 'CNN':
-    model = models.CNN(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN(in_shape=(L,A), num_out=num_labels, activation=activation, 
                            num_filters=num_filters, dense_units=96, heads=8, key_size=128)
 elif model_name == 'CNN2':
-    model = models.CNN2(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN2(in_shape=(L,A), num_out=num_labels, activation=activation, 
                            num_filters=num_filters, dense_units=96, heads=8, key_size=128)
 elif model_name == 'CNN_ATT':
-    model = models.CNN_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, 
                            num_filters=num_filters, dense_units=96, heads=8, key_size=48)
 
 elif model_name == 'CNN_LSTM':
-    model = models.CNN_LSTM(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM(in_shape=(L,A), num_out=num_labels, activation=activation, 
                             num_filters=num_filters, lstm_units=48, dense_units=96)
 
 elif model_name == 'CNN_LSTM_ATT':
-    model = models.CNN_LSTM_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                 num_filters=num_filters, lstm_units=48, dense_units=96, heads=8, key_size=96)
 elif model_name == 'CNN_LSTM_TRANS1':
-    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=1, heads=8, key_size=48, dense_units=96)
 elif model_name == 'CNN_LSTM_TRANS2':
-    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=2, heads=8, key_size=48, dense_units=96)
 elif model_name == 'CNN_LSTM_TRANS4':
-    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=4, heads=8, key_size=48, dense_units=96)
 
 elif model_name == 'CNN_LSTM2':
-    model = models.CNN_LSTM2(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM2(in_shape=(L,A), num_out=num_labels, activation=activation, 
                             num_filters=num_filters, lstm_units=48, dense_units=96)
 
 elif model_name == 'CNN_LSTM2_ATT':
-    model = models.CNN_LSTM2_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM2_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                 num_filters=num_filters, lstm_units=48, dense_units=96, heads=8, key_size=96)
 elif model_name == 'CNN_LSTM2_TRANS1':
-    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=1, heads=8, key_size=48, dense_units=96)
 elif model_name == 'CNN_LSTM2_TRANS2':
-    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=2, heads=8, key_size=48, dense_units=96)
 elif model_name == 'CNN_LSTM2_TRANS4':
-    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=4, heads=8, key_size=48, dense_units=96)
 
 elif model_name == 'CNN2_ATT':
-    model = models.CNN2_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN2_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, 
                            num_filters=num_filters, dense_units=96, heads=8, key_size=48)
 
 elif model_name == 'CNN2_LSTM':
-    model = models.CNN2_LSTM(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN2_LSTM(in_shape=(L,A), num_out=num_labels, activation=activation, 
                             num_filters=num_filters, lstm_units=48, dense_units=96)
 
 elif model_name == 'CNN2_LSTM_ATT':
-    model = models.CNN2_LSTM_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN2_LSTM_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                 num_filters=num_filters, lstm_units=48, dense_units=96, heads=8, key_size=48)
 elif model_name == 'CNN2_LSTM_TRANS1':
-    model = models.CNN2_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN2_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=1, heads=8, key_size=48, dense_units=96)
 elif model_name == 'CNN2_LSTM_TRANS2':
-    model = models.CNN_2LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN_2LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=2, heads=8, key_size=48, dense_units=96)
 elif model_name == 'CNN2_LSTM_TRANS4':
-    model = models.CNN2_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+    model = models.CNN2_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=4, heads=8, key_size=48, dense_units=96)
 else:
     print("can't find model")
 
-model_name = model_name + '_' + str(pool_size) + '_' + activation + '_' + str(trial)
+model_name = model_name + '_' + activation + '_' + str(trial)
 
 # compile model model
 auroc = tf.keras.metrics.AUC(curve='ROC', name='auroc')

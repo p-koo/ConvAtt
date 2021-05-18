@@ -1,133 +1,86 @@
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 0 -f 24
 
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 1 -f 24
-
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 2 -f 24
-
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 3 -f 24
-
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 4 -f 24
+python code_pipeline.py -m CNN -a relu -t 0 -f 24
+python code_pipeline.py -m CNN -a relu -t 1 -f 24
+python code_pipeline.py -m CNN -a relu -t 2 -f 24
+python code_pipeline.py -m CNN -a relu -t 3 -f 24
+python code_pipeline.py -m CNN -a relu -t 4 -f 24
+python code_pipeline.py -m CNN -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN -a exponential -t 4 -f 24
 
 
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 5 -f 24
+python code_pipeline.py -m CNN_ATT -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_ATT -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_ATT -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_ATT -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_ATT -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_ATT -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_ATT -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_ATT -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_ATT -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_ATT -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 6 -f 24
 
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 7 -f 24
 
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 8 -f 24
+python code_pipeline.py -m CNN_LSTM -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN_ATT -a relu -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_ATT -a exponential -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM -a relu -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM -a exponential -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a relu -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM_ATT -a exponential -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -p 25 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -p 25 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 9 -f 24
+
+python code_pipeline.py -m CNN_LSTM_ATT -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM_ATT -a exponential -t 4 -f 24
+
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS1 -a exponential -t 4 -f 24
+
+
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS2 -a exponential -t 4 -f 24
+
+
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -t 4 -f 24
 
 
 
@@ -135,303 +88,140 @@ python code_pipeline.py -m CNN_LSTM_TRANS4 -a exponential -p 25 -t 9 -f 24
 
 
 
-
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 0 -f 24
-
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 1 -f 24
-
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 2 -f 24
-
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 3 -f 24
-
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 4 -f 24
+python code_pipeline.py -m CNN2 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN2 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN2 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN2 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN2 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN2 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN2 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN2 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN2 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN2 -a exponential -t 4 -f 24
 
 
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 5 -f 24
+python code_pipeline.py -m CNN2_ATT -a relu -t 0 -f 24
+python code_pipeline.py -m CNN2_ATT -a relu -t 1 -f 24
+python code_pipeline.py -m CNN2_ATT -a relu -t 2 -f 24
+python code_pipeline.py -m CNN2_ATT -a relu -t 3 -f 24
+python code_pipeline.py -m CNN2_ATT -a relu -t 4 -f 24
+python code_pipeline.py -m CNN2_ATT -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN2_ATT -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN2_ATT -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN2_ATT -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN2_ATT -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 6 -f 24
+python code_pipeline.py -m CNN2_LSTM -a relu -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM -a relu -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM -a relu -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM -a relu -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM -a relu -t 4 -f 24
+python code_pipeline.py -m CNN2_LSTM -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 7 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a relu -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a relu -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a relu -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a relu -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a relu -t 4 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 8 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN2_ATT -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_ATT -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM_ATT -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS1 -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -p 5 -t 9 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS2 -a exponential -t 4 -f 24
+
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN2_LSTM_TRANS4 -a exponential -t 4 -f 24
 
 
 
 
+python code_pipeline.py -m CNN_LSTM2 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2 -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -t 4 -f 24
 
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 3 -f 24
-
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 4 -f 24
-
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 5 -f 24
-
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 6 -f 24
-
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 7 -f 24
-
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 8 -f 24
-
-python code_pipeline.py -m CNN_LSTM2 -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM2 -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM2_ATT -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a relu -p 5 -t 12 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS1 -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS2 -a exponential -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -p 5 -t 9 -f 24
-python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 9 -f 24
-
-
-
-python code_pipeline.py -m CNN -a relu -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN -a relu -p 25 -t 9 -f 24
-
-python code_pipeline.py -m CNN -a exponential -p 25 -t 0 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 1 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 2 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 3 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 4 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 5 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 6 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 7 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 8 -f 24
-python code_pipeline.py -m CNN -a exponential -p 25 -t 9 -f 24
-
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2 -a relu -p 5 -t 9 -f 24
-
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 0 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 1 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 2 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 3 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 4 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 5 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 6 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 7 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 8 -f 24
-python code_pipeline.py -m CNN2 -a exponential -p 5 -t 9 -f 24
-
-
-
-
-
-
-
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a relu -t 4 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -t 0 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -t 1 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -t 2 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -t 3 -f 24
+python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -t 4 -f 24
 
 
