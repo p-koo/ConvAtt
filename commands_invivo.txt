@@ -189,6 +189,39 @@ python invivo_pipeline.py -d deepsea -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 
 
 
 
+python invivo_pipeline.py -m CNN -a relu -p 25 -t 0 -f 64
+python invivo_pipeline.py -m CNN -a relu -p 25 -t 1 -f 64
+python invivo_pipeline.py -m CNN -a relu -p 25 -t 2 -f 64
+python invivo_pipeline.py -m CNN -a relu -p 25 -t 3 -f 64
+python invivo_pipeline.py -m CNN -a relu -p 25 -t 4 -f 64
+python invivo_pipeline.py -m CNN -a exponential -p 25 -t 0 -f 64
+python invivo_pipeline.py -m CNN -a exponential -p 25 -t 1 -f 64
+python invivo_pipeline.py -m CNN -a exponential -p 25 -t 2 -f 64
+python invivo_pipeline.py -m CNN -a exponential -p 25 -t 3 -f 64
+python invivo_pipeline.py -m CNN -a exponential -p 25 -t 4 -f 64
+
+python invivo_pipeline.py -m CNN2 -a relu -p 5 -t 0 -f 64
+python invivo_pipeline.py -m CNN2 -a relu -p 5 -t 1 -f 64
+python invivo_pipeline.py -m CNN2 -a relu -p 5 -t 2 -f 64
+python invivo_pipeline.py -m CNN2 -a relu -p 5 -t 3 -f 64
+python invivo_pipeline.py -m CNN2 -a relu -p 5 -t 4 -f 64
+python invivo_pipeline.py -m CNN2 -a exponential -p 5 -t 0 -f 64
+python invivo_pipeline.py -m CNN2 -a exponential -p 5 -t 1 -f 64
+python invivo_pipeline.py -m CNN2 -a exponential -p 5 -t 2 -f 64
+python invivo_pipeline.py -m CNN2 -a exponential -p 5 -t 3 -f 64
+python invivo_pipeline.py -m CNN2 -a exponential -p 5 -t 4 -f 64
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

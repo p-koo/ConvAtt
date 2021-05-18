@@ -383,49 +383,49 @@ python code_pipeline.py -m CNN_LSTM2_TRANS4 -a exponential -p 5 -t 9 -f 24
 
 
 
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 0 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 1 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 2 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 3 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 4 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 5 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 6 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 7 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 8 -f 32
-python synthetic_pipeline.py -m CNN -a relu -p 25 -t 9 -f 32
+python code_pipeline.py -m CNN -a relu -p 25 -t 0 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 1 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 2 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 3 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 4 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 5 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 6 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 7 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 8 -f 24
+python code_pipeline.py -m CNN -a relu -p 25 -t 9 -f 24
 
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 0 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 1 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 2 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 3 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 4 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 5 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 6 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 7 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 8 -f 32
-python synthetic_pipeline.py -m CNN -a exponential -p 25 -t 9 -f 32
+python code_pipeline.py -m CNN -a exponential -p 25 -t 0 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 1 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 2 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 3 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 4 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 5 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 6 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 7 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 8 -f 24
+python code_pipeline.py -m CNN -a exponential -p 25 -t 9 -f 24
 
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 0 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 1 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 2 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 3 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 4 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 5 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 6 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 7 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 8 -f 32
-python synthetic_pipeline.py -m CNN2 -a relu -p 5 -t 9 -f 32
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 0 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 1 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 2 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 3 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 4 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 5 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 6 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 7 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 8 -f 24
+python code_pipeline.py -m CNN2 -a relu -p 5 -t 9 -f 24
 
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 0 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 1 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 2 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 3 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 4 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 5 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 6 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 7 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 8 -f 32
-python synthetic_pipeline.py -m CNN2 -a exponential -p 5 -t 9 -f 32
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 0 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 1 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 2 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 3 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 4 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 5 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 6 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 7 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 8 -f 24
+python code_pipeline.py -m CNN2 -a exponential -p 5 -t 9 -f 24
 
 
 
