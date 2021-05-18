@@ -38,6 +38,12 @@ activation = args.a
 trial = args.t
 num_filters = args.f
 
+print(model_name)
+print(model_name)
+print(model_name)
+print(model_name)
+print(model_name)
+print(model_name)
 # set paths
 results_path = '../results_task1'
 if not os.path.exists(results_path):
