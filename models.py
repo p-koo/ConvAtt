@@ -39,7 +39,7 @@ def CNN2(in_shape=(200, 4), num_filters=32, batch_norm=True, activation='relu', 
     nn = layers.Dropout(0.1)(nn)
     nn = layers.Conv1D(filters=num_filters, kernel_size=7, use_bias=False, padding='same')(nn)
     nn = layers.BatchNormalization()(nn)
-    nn = layers.Activation(activation)(nn)
+    nn = layers.Activation('relu')(nn)
     nn = layers.MaxPool1D(pool_size=6)(nn)
     nn = layers.Dropout(0.1)(nn)
 
@@ -290,7 +290,7 @@ def CNN2_ATT(in_shape=(200, 4), num_filters=32, batch_norm=True, activation='rel
     nn = layers.Dropout(0.1)(nn)
     nn = layers.Conv1D(filters=num_filters, kernel_size=7, use_bias=False, padding='same')(nn)
     nn = layers.BatchNormalization()(nn)
-    nn = layers.Activation(activation)(nn)
+    nn = layers.Activation('relu')(nn)
     nn = layers.MaxPool1D(pool_size=6)(nn)
     nn = layers.Dropout(0.1)(nn)
 
@@ -319,7 +319,7 @@ def CNN2_LSTM(in_shape=(200, 4), num_filters=32, batch_norm=True, activation='re
     nn = layers.Dropout(0.1)(nn)
     nn = layers.Conv1D(filters=num_filters, kernel_size=7, use_bias=False, padding='same')(nn)
     nn = layers.BatchNormalization()(nn)
-    nn = layers.Activation(activation)(nn)
+    nn = layers.Activation('relu')(nn)
     nn = layers.MaxPool1D(pool_size=6)(nn)
     nn = layers.Dropout(0.1)(nn)
 
@@ -350,7 +350,7 @@ def CNN2_LSTM_ATT(in_shape=(200, 4), num_filters=32, batch_norm=True, activation
     nn = layers.Dropout(0.1)(nn)
     nn = layers.Conv1D(filters=num_filters, kernel_size=7, use_bias=False, padding='same')(nn)
     nn = layers.BatchNormalization()(nn)
-    nn = layers.Activation(activation)(nn)
+    nn = layers.Activation('relu')(nn)
     nn = layers.MaxPool1D(pool_size=6)(nn)
     nn = layers.Dropout(0.1)(nn)
 
@@ -385,7 +385,7 @@ def CNN2_LSTM_TRANS(in_shape=(200, 4), num_filters=32, batch_norm=True, activati
     nn = layers.Dropout(0.1)(nn)
     nn = layers.Conv1D(filters=num_filters, kernel_size=7, use_bias=False, padding='same')(nn)
     nn = layers.BatchNormalization()(nn)
-    nn = layers.Activation(activation)(nn)
+    nn = layers.Activation('relu')(nn)
     nn = layers.MaxPool1D(pool_size=6)(nn)
     nn = layers.Dropout(0.1)(nn)
 
