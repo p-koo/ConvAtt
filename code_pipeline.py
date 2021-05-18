@@ -21,8 +21,9 @@ def load_synthetic_data(file_path):
         y_valid = np.array(dataset['Y_valid']).astype(np.int32)
         x_test = np.array(dataset['X_test']).astype(np.float32).transpose([0, 2, 1])
         y_test = np.array(dataset['Y_test']).astype(np.int32)
+        model_test = np.array(dataset['model_test']).astype(np.float32).transpose([0, 2, 1])
 
-    return x_train, y_train, x_valid, y_valid, x_test, y_test
+    return x_train, y_train, x_valid, y_valid, x_test, y_test, model_test
 
 #-----------------------------------------------------------------
 
@@ -49,7 +50,7 @@ if not os.path.exists(results_path):
 data_path = '../../data'
 filepath = os.path.join(data_path, 'synthetic_dataset.h5')
 data = load_synthetic_data(filepath)
-x_train, y_train, x_valid, y_valid, x_test, y_test = data
+x_train, y_train, x_valid, y_valid, x_test, y_test, model_test = data
 N, L, A = x_train.shape
 num_labels = y_train.shape[1]
 
