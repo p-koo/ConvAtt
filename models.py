@@ -25,6 +25,7 @@ def CNN(in_shape=(200, 4), num_filters=32, batch_norm=True, activation='relu', h
 
     outputs = layers.Dense(num_out, activation='sigmoid')(nn)
 
+    return Model(inputs=inputs, outputs=outputs)
 
 
 def CNN2(in_shape=(200, 4), num_filters=32, batch_norm=True, activation='relu', heads=8, key_size=64, dense_units=512, num_out=12):
