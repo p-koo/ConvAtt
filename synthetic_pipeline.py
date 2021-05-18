@@ -1,15 +1,14 @@
 import numpy as np
-import requests as rq
-import io, h5py, os
+import h5py, os
 from six.moves import cPickle
-
-import tfomics
-import tensorflow as tf
-from tfomics import moana, evaluate, impress
-import models
-import utils
 import argparse
 import matplotlib.pyplot as plt
+
+import tensorflow as tf
+import tfomics
+from tfomics import moana, evaluate, impress
+import models
+
 
 #-----------------------------------------------------------------
 
@@ -35,7 +34,6 @@ parser.add_argument("-f", type=int, default=64, help="filters")
 parser.add_argument("-t", type=int, default=None, help="trial")
 args = parser.parse_args()
 
-dataset = args.d
 model_name = args.m
 pool_size = args.p
 activation = args.a
