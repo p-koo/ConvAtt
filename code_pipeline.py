@@ -75,6 +75,24 @@ elif model_name == 'CNN_LSTM_TRANS2':
 elif model_name == 'CNN_LSTM_TRANS4':
     model = models.CNN_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
                                   num_filters=num_filters, num_layers=4, heads=8, key_size=48, dense_units=96)
+
+elif model_name == 'CNN_LSTM2':
+    model = models.CNN_LSTM2(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                            num_filters=num_filters, lstm_units=48, dense_units=96)
+
+elif model_name == 'CNN_LSTM2_ATT':
+    model = models.CNN_LSTM2_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                                num_filters=num_filters, lstm_units=48, dense_units=96, heads=8, key_size=96)
+elif model_name == 'CNN_LSTM2_TRANS1':
+    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                                  num_filters=num_filters, num_layers=1, heads=8, key_size=48, dense_units=96)
+elif model_name == 'CNN_LSTM2_TRANS2':
+    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                                  num_filters=num_filters, num_layers=2, heads=8, key_size=48, dense_units=96)
+elif model_name == 'CNN_LSTM2_TRANS4':
+    model = models.CNN_LSTM2_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
+                                  num_filters=num_filters, num_layers=4, heads=8, key_size=48, dense_units=96)
+
 elif model_name == 'CNN2_ATT':
     model = models.CNN2_ATT(in_shape=(L,A), num_out=num_labels, activation=activation, pool_size=pool_size,
                            num_filters=num_filters, dense_units=96, heads=8, key_size=48)
