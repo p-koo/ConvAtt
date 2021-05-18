@@ -107,7 +107,7 @@ model.compile(tf.keras.optimizers.Adam(0.001), loss='binary_crossentropy', metri
 # fit model
 lr_decay = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_aupr', factor=0.2, patient=4, verbose=1, min_lr=1e-7, mode='max')
 early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_aupr', patience=12, verbose=1, mode='max', restore_best_weights=True)
-history = model.fit(x_train, y_train, epochs=100, batch_size=100, validation_data=(x_valid, y_valid), callbacks=[lr_decay, early_stop], verbose=1)
+history = model.fit(x_train, y_train, epochs=200, batch_size=100, validation_data=(x_valid, y_valid), callbacks=[lr_decay, early_stop], verbose=1)
 
 # save training and performance results
 results = model.evaluate(x_test, y_test)
@@ -125,9 +125,9 @@ index = [i.name for i in model.layers].index('conv_activation')
 ppms = moana.filter_activations(x_test, model, layer=index, window=20, threshold=0.5)
 
 # generate meme file
-ppms = moana.clip_filters(ppms, threshold=0.5, pad=3)
+ppms_filtered = moana.clip_filters(ppms, threshold=0.5, pad=3)
 motif_dir = os.path.join(results_path, model_name+'_filters.txt')
-moana.meme_generate(ppms, output_file=motif_dir, prefix='filter')
+moana.meme_generate(ppms_filtered, output_file=motif_dir, prefix='filter')
 
 # Tomtom analysis
 tomtom_dir = os.path.join(results_path, model_name)
@@ -140,11 +140,12 @@ stats = tfomics.evaluate.motif_comparison_synthetic_dataset(os.path.join(tomtom_
 stats_dir = os.path.join(results_path, model_name+'_stats.npy')
 np.save(stats_dir, stats, allow_pickle=True)
 
-# visualize filters
-fig = plt.figure(figsize=(25,8))
-impress.plot_filters(ppms, fig, num_cols=8, names=stats[2], fontsize=14)
-filter_dir = os.path.join(results_path, model_name+'_filters.pdf')
-fig.savefig(filter_dir, format='pdf', dpi=200, bbox_inches='tight')
+if trial == 0:
+    # visualize filters
+    fig = plt.figure(figsize=(25,8))
+    impress.plot_filters(ppms, fig, num_cols=8, names=stats[2], fontsize=14)
+    filter_dir = os.path.join(results_path, model_name+'_filters.pdf')
+    fig.savefig(filter_dir, format='pdf', dpi=200, bbox_inches='tight')
 
 
 
