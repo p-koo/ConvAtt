@@ -33,7 +33,6 @@ parser.add_argument("-f", type=int, default=64, help="filters")
 parser.add_argument("-t", type=int, default=None, help="trial")
 args = parser.parse_args()
 
-dataset = args.d
 model_name = args.m
 pool_size = args.p
 activation = args.a
