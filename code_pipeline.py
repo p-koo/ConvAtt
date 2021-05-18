@@ -148,7 +148,7 @@ snr = evaluate.calculate_snr(sal_signal, sal_noise_topk)
 results = model.evaluate(x_test, y_test, verbose=2)
 model_auroc = results[1]
 
-stats_dir = os.path.join(results_path, model_name+'_stats.npy')
+stats_dir = os.path.join(results_path, model_name+'_stats.pickle')
 with open(stats_dir, 'wb') as handle:
     cPickle.dump(model_auroc, handle)
     cPickle.dump(saliency_roc, handle)
