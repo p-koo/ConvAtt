@@ -112,7 +112,7 @@ elif model_name == 'CNN2_LSTM_TRANS1':
     model = models.CNN2_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=1, heads=8, key_size=128, dense_units=512)
 elif model_name == 'CNN2_LSTM_TRANS2':
-    model = models.CNN_2LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
+    model = models.CNN2_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
                                   num_filters=num_filters, num_layers=2, heads=8, key_size=128, dense_units=512)
 elif model_name == 'CNN2_LSTM_TRANS4':
     model = models.CNN2_LSTM_TRANS(in_shape=(L,A), num_out=num_labels, activation=activation, 
