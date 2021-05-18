@@ -53,6 +53,7 @@ num_labels = y_train.shape[1]
 
 # build model
 if model_name == 'CNN':
+    print('CNN')
     model = models.CNN(in_shape=(L,A), num_out=num_labels, activation=activation, 
                            num_filters=num_filters, dense_units=512, heads=8, key_size=128)
 elif model_name == 'CNN2':
