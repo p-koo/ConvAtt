@@ -122,15 +122,41 @@ else:
 
 model_name = model_name + '_' + activation + '_' + str(trial)
 
-# compile model model
-auroc = tf.keras.metrics.AUC(curve='ROC', name='auroc')
-aupr = tf.keras.metrics.AUC(curve='PR', name='aupr')
-model.compile(tf.keras.optimizers.Adam(0.001), loss='binary_crossentropy', metrics=[auroc, aupr])
 
-# fit model
-lr_decay = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_aupr', factor=0.2, patient=4, verbose=1, min_lr=1e-7, mode='max')
-early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_aupr', patience=12, verbose=1, mode='max', restore_best_weights=True)
-history = model.fit(x_train, y_train, epochs=200, batch_size=100, validation_data=(x_valid, y_valid), callbacks=[lr_decay, early_stop], verbose=1)
+
+# set up optimizer and metrics
+auroc = keras.metrics.AUC(curve='ROC', name='auroc')
+aupr = keras.metrics.AUC(curve='PR', name='aupr')
+optimizer = keras.optimizers.Adam(learning_rate=0.001)
+loss = keras.losses.BinaryCrossentropy(from_logits=False, label_smoothing=0.0)
+model.compile(optimizer=optimizer, loss=loss, metrics=[auroc, aupr])
+
+
+# early stopping callback
+es_callback = keras.callbacks.EarlyStopping(monitor='val_auroc', 
+                                            patience=10, 
+                                            verbose=1, 
+                                            mode='max', 
+                                            restore_best_weights=True)
+# reduce learning rate callback
+reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_auroc', 
+                                                factor=0.2,
+                                                patience=4, 
+                                                min_lr=1e-7,
+                                                mode='max',
+                                                verbose=1) 
+
+# train model
+history = model.fit(x_train, y_train, 
+                    epochs=100,
+                    batch_size=100, 
+                    shuffle=True,
+                    validation_data=(x_valid, y_valid), 
+                    callbacks=[es_callback, reduce_lr])
+
+# test model 
+results = model.evaluate(x_test, y_test, verbose=2)
+model_auroc = results[1]
 
 # get positive label sequences and sequence model
 pos_index = np.where(y_test[:,0] == 1)[0]   
@@ -138,25 +164,29 @@ X = x_test[pos_index]
 X_model = model_test[pos_index]
 
 # instantiate explainer class
-explainer = explain.Explainer(model, class_index=0)
+explainer = tfomics.explain.Explainer(model, class_index=0)
 
 # calculate attribution maps
 saliency_scores = explainer.saliency_maps(X)
 
 # reduce attribution maps to 1D scores
-sal_scores = explain.grad_times_input(X, saliency_scores)
-saliency_roc, saliency_pr = evaluate.interpretability_performance(sal_scores, X_model, threshold=0.1)
+sal_scores = tfomics.explain.grad_times_input(X, saliency_scores)
+
+# compare distribution of attribution scores at positions with and without motifs
+saliency_roc, saliency_pr = tfomics.evaluate.interpretability_performance(sal_scores, X_model, threshold=0.1)
 sal_signal, sal_noise_max, sal_noise_mean, sal_noise_topk = evaluate.signal_noise_stats(sal_scores, X_model, top_k=20, threshold=0.1)
 snr = evaluate.calculate_snr(sal_signal, sal_noise_topk)
 
-results = model.evaluate(x_test, y_test, verbose=2)
-model_auroc = results[1]
+print(model_name)
+print(model_auroc)
+print("%s: %.3f+/-%.3f"%('saliency', np.mean(saliency_roc), np.std(saliency_roc)))
+print("%s: %.3f+/-%.3f"%('saliency', np.mean(saliency_pr), np.std(saliency_pr)))
 
+# save results
 stats_dir = os.path.join(results_path, model_name+'_stats.pickle')
 with open(stats_dir, 'wb') as handle:
     cPickle.dump(model_auroc, handle)
-    cPickle.dump(saliency_roc, handle)
-    cPickle.dump(saliency_pr, handle)
-    cPickle.dump(snr, handle)
-    cPickle.dump(history.history, handle)
+    cPickle.dump(np.mean(saliency_roc), handle)
+    cPickle.dump(np.mean(saliency_pr), handle)
+    cPickle.dump(np.mean(snr), handle)
 
