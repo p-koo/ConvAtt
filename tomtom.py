@@ -23,7 +23,8 @@ for model in base_models:
         trial_stats = []
         for trial in range(num_trials):
             model_name = model + '_' + activation + '_' + str(trial)
-
+            print(model_name)
+            
             # Tomtom analysis
             motif_dir = os.path.join(results_path, model_name+'_filters.txt')
             tomtom_dir = os.path.join(save_path, model_name)
