@@ -39,7 +39,7 @@ trial = args.t
 num_filters = args.f
 
 # set paths
-results_path = '../results_task1'
+results_path = '../results_task1_2'
 if not os.path.exists(results_path):
     os.makedirs(results_path)
 
@@ -127,9 +127,19 @@ auroc = tf.keras.metrics.AUC(curve='ROC', name='auroc')
 aupr = tf.keras.metrics.AUC(curve='PR', name='aupr')
 model.compile(tf.keras.optimizers.Adam(0.001), loss='binary_crossentropy', metrics=[auroc, aupr])
 
-# fit model
-lr_decay = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_aupr', factor=0.2, patient=4, verbose=1, min_lr=1e-7, mode='max')
-early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_aupr', patience=12, verbose=1, mode='max', restore_best_weights=True)
+# early stopping callback
+es_callback = keras.callbacks.EarlyStopping(monitor='val_auroc', 
+                                            patience=10, 
+                                            verbose=1, 
+                                            mode='max', 
+                                            restore_best_weights=True)
+# reduce learning rate callback
+reduce_lr = keras.callbacks.ReduceLROnPlateau(monitor='val_auroc', 
+                                                factor=0.2,
+                                                patience=4, 
+                                                min_lr=1e-7,
+                                                mode='max',
+                                                verbose=1) 
 
 # train model
 history = model.fit(x_train, y_train, 
@@ -137,8 +147,7 @@ history = model.fit(x_train, y_train,
                     batch_size=100, 
                     shuffle=True,
                     validation_data=(x_valid, y_valid), 
-                    callbacks=[early_stop, lr_decay])
-
+                    callbacks=[es_callback, reduce_lr])
 
 # save training and performance results
 results = model.evaluate(x_test, y_test)
