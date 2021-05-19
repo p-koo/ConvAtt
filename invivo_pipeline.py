@@ -190,7 +190,7 @@ model.compile(tf.keras.optimizers.Adam(0.001), loss='binary_crossentropy', metri
 
 # fit model
 lr_decay = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_aupr', factor=0.2, patient=4, verbose=1, min_lr=1e-7, mode='max')
-early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_aupr', patience=12, verbose=1, mode='max', restore_best_weights=True)
+early_stop = tf.keras.callbacks.EarlyStopping(monitor='val_aupr', patience=10, verbose=1, mode='max', restore_best_weights=True)
 
 # train model
 history = model.fit(x_train, y_train, 

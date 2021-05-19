@@ -3,6 +3,7 @@ import h5py, os
 from six.moves import cPickle
 import argparse
 import matplotlib.pyplot as plt
+from tensorflow import keras
 
 import tensorflow as tf
 import tfomics
