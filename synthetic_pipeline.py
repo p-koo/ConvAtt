@@ -137,7 +137,7 @@ history = model.fit(x_train, y_train,
                     batch_size=100, 
                     shuffle=True,
                     validation_data=(x_valid, y_valid), 
-                    callbacks=[es_callback, reduce_lr])
+                    callbacks=[early_stop, lr_decay])
 
 
 # save training and performance results
