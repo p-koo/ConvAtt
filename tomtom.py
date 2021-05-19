@@ -24,14 +24,14 @@ for model in base_models:
         for trial in range(num_trials):
             model_name = model + '_' + activation + '_' + str(trial)
 
-			# Tomtom analysis
-			motif_dir = os.path.join(results_path, model_name+'_filters.txt')
-			tomtom_dir = os.path.join(save_path, model_name)
-			jaspar_dir = 'motif_database.txt'
-			output = moana.tomtom(motif_dir, jaspar_dir, tomtom_dir, evalue=False, thresh=0.1, dist='pearson', png=None, tomtom_path='tomtom')
+            # Tomtom analysis
+            motif_dir = os.path.join(results_path, model_name+'_filters.txt')
+            tomtom_dir = os.path.join(save_path, model_name)
+            jaspar_dir = 'motif_database.txt'
+            output = moana.tomtom(motif_dir, jaspar_dir, tomtom_dir, evalue=False, thresh=0.1, dist='pearson', png=None, tomtom_path='tomtom')
 
-			# motif analysis
-			num_filters = moana.count_meme_entries(motif_dir)
-			stats = tfomics.evaluate.motif_comparison_synthetic_dataset(os.path.join(tomtom_dir,'tomtom.tsv'), num_filters)
-			stats_dir = os.path.join(save_path, model_name+'_stats.npy')
-			np.save(stats_dir, stats, allow_pickle=True)
+            # motif analysis
+            num_filters = moana.count_meme_entries(motif_dir)
+            stats = tfomics.evaluate.motif_comparison_synthetic_dataset(os.path.join(tomtom_dir,'tomtom.tsv'), num_filters)
+            stats_dir = os.path.join(save_path, model_name+'_stats.npy')
+            np.save(stats_dir, stats, allow_pickle=True)
